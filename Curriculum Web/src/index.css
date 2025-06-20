@@ -10,29 +10,29 @@
 @font-face {
   font-family: Satoshi ;
   font-style: normal;
-  src: url("/fonts/Satoshi_Complete/Satoshi-Regular.ttf") format("ttf");
+  src: url("/fonts/Satoshi_Complete/Satoshi-Regular.ttf");
 }
 
 @font-face {
   font-family: Satoshi-md ;
   font-style: normal;
-  src: url("/fonts/Satoshi_Complete/Satoshi-Medium.ttf") format("ttf");
+  src: url("/fonts/Satoshi_Complete/Satoshi-Medium.ttf") ;
 }
 
 @font-face {
   font-family: Satoshi-Bold ;
   font-style: normal;
-  src: url("/fonts/Satoshi_Complete/Satoshi-Bold.ttf") format("ttf");
+  src: url("/fonts/Satoshi_Complete/Satoshi-Bold.ttf") ;
 }
 
 @font-face {
   font-family: Satoshi-Black ;
   font-style: normal;
-  src: url("/fonts/Satoshi_Complete/Satoshi-Black.ttf") format("ttf");
+  src: url("/fonts/Satoshi_Complete/Satoshi-Black.ttf");
 }
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Satoshi, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 

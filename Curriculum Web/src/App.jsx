@@ -1,14 +1,14 @@
 import { useState } from "react"
+import TitleBig from "./Components/Text/TitleBig"
 
 function App() {
-  const [name,setName] = useState("Andrew Rey")
 
   const changeName = ()=>{
   }
 
   return (
     <>
-    <p className="">Hola</p>
+    <TitleBig  text={"Andrew Rey"}></TitleBig>
     </>
   )
 }
