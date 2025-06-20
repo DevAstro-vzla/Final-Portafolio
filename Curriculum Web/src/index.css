@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+
+@font-face {
+  font-family: Baunk ;
+  font-style: normal;
+  src: url("/fonts/BAUNK/Baunk.woff") format("woff2");
+}
+
+@font-face {
+  font-family: Satoshi ;
+  font-style: normal;
+  src: url("/fonts/Satoshi_Complete/Satoshi-Regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: Satoshi-md ;
+  font-style: normal;
+  src: url("/fonts/Satoshi_Complete/Satoshi-Medium.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: Satoshi-Bold ;
+  font-style: normal;
+  src: url("/fonts/Satoshi_Complete/Satoshi-Bold.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: Satoshi-Black ;
+  font-style: normal;
+  src: url("/fonts/Satoshi_Complete/Satoshi-Black.ttf") format("ttf");
+}
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #252525;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
