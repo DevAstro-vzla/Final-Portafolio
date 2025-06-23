@@ -1,14 +1,14 @@
 import { useState } from "react"
-import TitleBig from "./Components/Text/TitleBig"
+import NavBar from "./Components/Sections/NavBar"
+import Hero from "./Components/Sections/Hero"
 
 function App() {
 
-  const changeName = ()=>{
-  }
 
   return (
     <>
-    <TitleBig  text={"Andrew Rey"}></TitleBig>
+      <NavBar></NavBar>
+      <Hero></Hero>
     </>
   )
 }

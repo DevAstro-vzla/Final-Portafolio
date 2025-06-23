@@ -8,37 +8,32 @@
 }
 
 @font-face {
-  font-family: Satoshi ;
+  font-family: Nippo ;
   font-style: normal;
-  src: url("/fonts/Satoshi_Complete/Satoshi-Regular.ttf");
+  src: url("/fonts/Nippo/Nippo-Regular.woff") format("woff");
 }
 
 @font-face {
-  font-family: Satoshi-md ;
+  font-family: Nippo-md ;
   font-style: normal;
-  src: url("/fonts/Satoshi_Complete/Satoshi-Medium.ttf") ;
+  src: url("/fonts/Nippo/Nippo-Medium.woff")  format("woff");
 }
 
 @font-face {
-  font-family: Satoshi-Bold ;
+  font-family: Nippo-Bold ;
   font-style: normal;
-  src: url("/fonts/Satoshi_Complete/Satoshi-Bold.ttf") ;
+  src: url("/fonts/Nippo/Nippo-Bold.woff") format("woff") ;
 }
 
-@font-face {
-  font-family: Satoshi-Black ;
-  font-style: normal;
-  src: url("/fonts/Satoshi_Complete/Satoshi-Black.ttf");
-}
 
 :root {
-  font-family: Satoshi, sans-serif;
+  font-family: Nippo, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #252525;
+  color: rgb(255, 255, 255);
+  background-color: #000000;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
