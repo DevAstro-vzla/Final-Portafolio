@@ -1,14 +1,18 @@
 import { useState } from "react"
 import NavBar from "./Components/Sections/NavBar"
 import Hero from "./Components/Sections/Hero"
+import TextSlider from "./Components/Sections/TextSlider"
 
 function App() {
 
 
   return (
     <>
-      <NavBar></NavBar>
-      <Hero></Hero>
+      <div className="flex flex-col">
+        <NavBar></NavBar>
+        <Hero></Hero>
+        <TextSlider></TextSlider>
+      </div>
     </>
   )
 }

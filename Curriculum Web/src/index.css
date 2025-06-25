@@ -40,3 +40,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+#root{
+  overflow-x: hidden;
+}

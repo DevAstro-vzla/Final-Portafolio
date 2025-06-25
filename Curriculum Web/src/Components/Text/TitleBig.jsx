@@ -62,7 +62,7 @@ function TitleBig({ text, hoverText }) {
     return (
         <div ref={container} onMouseEnter={handleMouse} >
             <p
-                className='Scramble font-[Baunk] text-4xl md:text-6xl'
+                className='Scramble text-shadow-lg/90 font-[Baunk] text-4xl md:text-6xl'
             >
                 {text}
             </p>
