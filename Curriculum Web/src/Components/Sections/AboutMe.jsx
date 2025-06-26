@@ -15,8 +15,26 @@ function AboutMe() {
     useGSAP(() => {
         const timeline = gsap.timeline({
             scrollTrigger: {
-                trigger: container.current,
-                start: "top 40%"
+                trigger: ".sobremiContainer",
+                markers:true,
+                toggleActions:"play complete restart restart",
+                start: "top 40%",
+                end:"bottom 50%",
+                onLeave:()=>{
+                    console.log("leave");
+                },
+                onEnter:()=>{
+                    console.log("enter");
+                    
+                },
+                onEnterBack:()=>{
+                    console.log("enterback");
+                    
+                },
+                onLeaveBack:()=>{
+                    console.log("leaveBack");
+                    
+                }
             }
         })
 
