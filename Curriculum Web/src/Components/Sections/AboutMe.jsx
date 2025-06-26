@@ -15,12 +15,12 @@ function AboutMe() {
     useGSAP(() => {
         const timeline = gsap.timeline({
             scrollTrigger: {
-                trigger: container.current,
-                start: "top 40%"
+                trigger: ".sobremiContainer",
+                toggleActions:"play play play play",
+                start: "top 40%",
+                end: "bottom 100%"
             }
         })
-
-
 
         document.fonts.ready.then(() => {
             const split = SplitText.create(".parrafo", {
@@ -28,18 +28,18 @@ function AboutMe() {
                 mask: "lines"
             })
 
-            gsap.from(split.words, {            
+            gsap.from(split.words, {
+                opacity: 0,
                 y: 50,
-                stagger:0.05,
+                stagger: 0.05,
                 scrollTrigger: {
                     trigger: ".parrafo",
-                    start:"clamp(top 80%)",
-                    end:"clamp(bottom bottom)",
-                    scrub:1
+                    start: "clamp(top 80%)",
+                    end: "clamp(bottom bottom)",
+                    scrub: 1
                 }
             })
         })
-
 
 
         timeline.set(".sobremiContainer", {
@@ -68,12 +68,15 @@ function AboutMe() {
             repeat: 2
         })
 
-
+        const resetAni = ScrollTrigger.create({
+            trigger:container.current,
+            onLeave:()=>timeline.pause(0)
+        })
 
     }, { scope: container })
 
     return (
-        <div ref={container} className='  w-full flex flex-col mt-15'>
+        <div ref={container} className=' shadow-lg/100 drop-shadow w-full flex flex-col mt-15'>
             <div className=' flex md:flex-row flex-col overflow-hidden max-h-[50vh] '>
                 <div className=' sobremiContainer bg-red-400 h-[40vh] flex items-center gap-[2px] p-[2px]'>
                     <div className='bg-black itemSobreMi  opacity-0 h-full flex-col items-center min-w-32 flex justify-center'>
@@ -94,14 +97,16 @@ function AboutMe() {
                 </div>
                 <img className='itemSobreMi-3 opacity-0 self-center m-2 w-1/2 object-contain bg-cover' src='/src/assets/code.webp'></img>
             </div>
-            <div className='w-2/3 justify-self-center overflow-scroll scroll text-5xl self-center m-15'
-                style={{
-                    scrollbarWidth: 'none'
-                }}>
-                <p className='parrafo' >
-                    A fecha de 26/06/2025 cuento con experiencia de 3 años trabajando en el area publica, reparando impresoras (Epson,Canon), ofreciendo soporte administrativo (tanto en excel como sistema privado), realizando conexiones ethernet privadas, implementando sistemas HikVision Biometricos, y muchas cosas mas
-                </p>
-            </div>
+            <div className='bg-neutral-950 m-10 border border-neutral-800'>
+                <div className='w-2/3  justify-self-center overflow-scroll scroll text-5xl self-center m-15'
+                    style={{
+                        scrollbarWidth: 'none'
+                    }}>
+                    <p className='parrafo' >
+                        A fecha de 26/06/2025 cuento con experiencia de 3 años trabajando en el area publica, reparando impresoras (Epson,Canon), ofreciendo soporte administrativo (tanto en excel como sistema privado), realizando conexiones ethernet privadas, implementando sistemas HikVision Biometricos, y muchas cosas mas
+                    </p>
+                </div>
+            </div>  
         </div>
     )
 }

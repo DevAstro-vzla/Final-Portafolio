@@ -31,6 +31,10 @@
   line-height: 1.5;
   font-weight: 400;
 
+::-webkit-scrollbar {
+    display: none;
+}
+
   color-scheme: light dark;
   color: rgb(255, 255, 255);
   background-color: #000000;
@@ -41,5 +45,5 @@
   -moz-osx-font-smoothing: grayscale;
 }
 #root{
-  overflow-x: hidden;
+  overflow-x: clip;
 }

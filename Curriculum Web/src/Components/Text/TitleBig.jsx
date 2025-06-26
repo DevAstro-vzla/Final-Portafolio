@@ -16,7 +16,7 @@ function TitleBig({ text, hoverText }) {
           opacity:0
         })
         gsap.to(".Scramble", {
-                      opacity:1,
+        opacity:1,
             scrambleText: {
                 text: text,
                 chars: "*{}ABCDEfghijka",

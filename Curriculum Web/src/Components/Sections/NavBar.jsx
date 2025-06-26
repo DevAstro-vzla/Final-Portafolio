@@ -22,7 +22,7 @@ function NavBar() {
 
     return (
         <nav ref={container} className='fixed top-1 flex justify-center w-full z-30  '>
-            <ul className='anima flex justify-around w-1/2 p-2 text-red-400 backdrop-blur-lg'
+            <ul className='anima flex justify-around w-1/2 p-2 text-red-400 backdrop-blur-lg '
                 style={{
                     clipPath: "polygon(0% 0%, 100% 0%, 100% 70%, 90% 100%, 0% 100%)"
                 }}>
