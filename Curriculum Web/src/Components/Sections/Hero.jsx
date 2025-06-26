@@ -9,14 +9,17 @@ import { useRef } from 'react'
 import gsap from 'gsap'
 import GreekSvg from '../Svg/GreekSvg'
 
+gsap.registerPlugin(useGSAP)
+
 function Hero() {
     const containerMain = useRef()
-    const timeline = gsap.timeline()
-    const timelineGreekColor = gsap.timeline({ repeat: -1 })
-    const { contextSafe } = useGSAP({ scope: containerMain })
 
     useGSAP(() => {
-        timeline.from(".initContainer", {
+
+        const timeline = gsap.timeline()
+        const timelineGreekColor = gsap.timeline({ repeat: -1 })
+
+        timeline.from(".contenedorInicial", {
             y: 100,
             opacity: 0,
             ease: "power1.inOut",
@@ -76,18 +79,18 @@ function Hero() {
             yoyo: true,
             duration: 2.2
         },)
-    })
+    }, { scope: containerMain })
 
 
     return (
         <>
             <div ref={containerMain} className='overflow-hidden w-lvw h-lvh relative '>
-                <div className='initContainer absolute top-0 bg-neutral-800 w-full h-full z-0'
+                <div className='contenedorInicial absolute top-0 bg-neutral-800 w-full h-full z-0'
                     style={{
                         clipPath: "polygon(2% 2%, 2% 85%, 13% 85%, 17% 90%, 17% 98%, 98% 98%, 98% 15%, 80% 15%, 70% 6%, 70% 2%)"
                     }}
                 ></div>
-                <div className='initContainer absolute top-0 bg-neutral-950 w-full h-full z-1'
+                <div className='contenedorInicial absolute top-0 bg-neutral-950 w-full h-full z-1'
                     style={{
                         clipPath: "polygon( calc(2% + 2px) calc(2% + 2px), calc(2% + 2px) calc(85% - 2px), calc(13% + 2px) calc(85% - 2px), calc(17% + 2px) calc(90% - 2px), calc(17% + 2px) calc(98% - 2px), calc(98% - 2px) calc(98% - 2px), calc(98% - 2px) calc(15% + 2px), calc(80% - 2px) calc(15% + 2px), calc(70% - 2px) calc(6% + 2px), calc(70% - 2px) calc(2% + 2px))"
                     }}
