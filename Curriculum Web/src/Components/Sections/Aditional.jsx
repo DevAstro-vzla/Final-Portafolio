@@ -8,6 +8,7 @@ import { useLoader } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader'
 import { useControls } from 'leva'
+import { OrbitControls } from '@react-three/drei'
 
 gsap.registerPlugin(ScrollSmoother, SplitText,)
 
@@ -32,23 +33,55 @@ function Aditional() {
         loader.setDRACOLoader(dracoLoader)
     })
 
-    const { x, y, z } = useControls({
-        x: {
-            value: 0,
-            step: 0.01
-        },
-        y: {
-            value: 0,
-            step: 0.01
-        },
-        z: {
-            value: 0,
-            step: 0.01
-        }
-    })
-
+    /*    const { x, y, z } = useControls({
+           x: {
+               value: -0.62,
+               step: 0.01,
+               min: -20,
+               max: 10
+           },
+           y: {
+               value: 2.80,
+               step: 0.01,
+               min: -10,
+               max: 10
+           },
+           z: {
+               value: 3.18,
+               step: 0.01,
+               min: -10,
+               max: 10
+           }
+       })
+   
+       const { xr, yr, zr } = useControls({
+           xr: {
+               value: 0,
+               step: 0.01,
+               min: -20,
+               max: 10
+           },
+           yr: {
+               value: 0,
+               step: 0.01,
+               min: -10,
+               max: 10
+           },
+           zr: {
+               value: -1.68,
+               step: 0.01,
+               min: -10,
+               max: 10
+           }
+       })
+    */
     hand.scene.scale.set(10, 10, 10)
-    hand.scene.position.set(x,y,z)
+    hand.scene.position.set(0, -10, 0)
+    hand.scene.rotation.set(-0.84, 1.50, 0.83)
+
+    flower.scene.scale.set(0.01, 0.01, 0.01)
+    flower.scene.position.set(-0.62, 2.80, 3.18)
+    flower.scene.rotation.set(0, 0, -1.68)
 
     useGSAP((() => {
 
@@ -63,18 +96,26 @@ function Aditional() {
 
             }
         })
+
+
         tl3DObject.from(".aditional3d", {
             opacity: 0
         })
         tl3DObject.to(".aditional3d", {
             opacity: 1
         })
-        tl3DObject.from(hand.scene.rotation, {
-            x: 0.5
+        tl3DObject.to(hand.scene.position, {
+            x: 0.00,
+            y: -6.33,
+            z: 0
         })
-        tl3DObject.to(hand.scene.rotation, {
-            x: 0
-        })
+        tl3DObject.to(flower.scene.position, {
+            x: -0.62,
+            y: 0.36,
+            z: 3.18
+        }, "<")
+
+
 
         document.fonts.ready.then(() => {
 
@@ -194,12 +235,13 @@ function Aditional() {
 
     return (
         <>
-            <div ref={container} className='w-full sm:h-[420vh] h-[250vh] bg-white flex flex-col justify-between'>
+            <div ref={container} className='w-full h-[420vh] bg-white flex flex-col justify-between'>
                 <p className=' z-3 sticky top-10 mix-blend-exclusion font-[Nippo-Bold] text-[6.5vw] text-nowrap tittleAditional'>Esfuerzo, Dedicación y Pasión</p>
                 <div className='aditional3d fixed w-[100vw] h-[100vh] opacity-100 z-0 top-0'>
                     <Canvas >
                         <ambientLight intensity={1}></ambientLight>
                         <primitive object={hand.scene} size={[1, 1, 1]}></primitive>
+                        <primitive object={flower.scene} size={[0.01, 0.01, 0.01]}></primitive>
                     </Canvas>
                 </div>
                 <div className='aditionalSegment flex flex-col gap-10 md:gap-5 md:flex-row justify-around w-full items-center '>
@@ -214,9 +256,8 @@ function Aditional() {
                     <img className='  drop-shadow-2xl shadow-lg/50 md:w-1/3 rounded-xl w-1/2 -rotate-6' src='/src/assets/priscilla-du-preez-XkKCui44iM0-unsplash.webp'></img>
                     <p className=' text-black text-center text-4xl' >Formar parte de un <br /> equipo de trabajo proactivo</p>
                 </div>
-                <div className='flex gap-10 md:gap-5 flex-col justify-around w-full items-center'>
-                    <img className=' aditionalImg0 w-[60%]  object-cover rounded-xl drop-shadow-2xl shadow-lg/50 ' src='/src/assets/ismail-korkmaz-elT08YCdBy8-unsplash.webp'></img>
-                    <p className=' ultiText text-black mb-10 justify-self-center self-center text-2xl' >Es lo que define la excelencia</p>
+                <div className='flex gap-10 mt-[50vh] flex-col justify-around w-full items-center'>
+                    <p className=' ultiText mb-10 justify-self-center self-center text-2xl z-10  text-shadow-lg/90' >Es lo que define la excelencia</p>
                 </div>
             </div>
         </>
