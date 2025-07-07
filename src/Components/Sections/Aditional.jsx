@@ -18,13 +18,13 @@ gsap.registerPlugin(ScrollSmoother, SplitText,)
 function Aditional() {
     const container = useRef()
 
-    const hand = useLoader(GLTFLoader, '/src/assets/3D/hand_sculpture.glb', (loader) => {
+    const hand = useLoader(GLTFLoader, '/assets/3D/hand_sculpture.glb', (loader) => {
         const dracoLoader = new DRACOLoader()
         dracoLoader.setDecoderPath('https://www.gstatic.com/draco/versioned/decoders/1.5.7/')
         dracoLoader.setDecoderConfig({ type: 'js' })
         loader.setDRACOLoader(dracoLoader)
     })
-    const flower = useLoader(GLTFLoader, '/src/assets/3D/flower.glb', (loader) => {
+    const flower = useLoader(GLTFLoader, '/assets/3D/flower.glb', (loader) => {
         const dracoLoader = new DRACOLoader()
         dracoLoader.setDecoderPath('https://www.gstatic.com/draco/versioned/decoders/1.5.7/')
         dracoLoader.setDecoderConfig({ type: 'js' })
@@ -242,15 +242,15 @@ function Aditional() {
                     </Canvas>
                 </div>
                 <div className='aditionalSegment flex flex-col gap-10 md:gap-5 md:flex-row justify-around w-full items-center '>
-                    <img className=' drop-shadow-2xl shadow-lg/50 md:w-1/3 w-1/2 rounded-xl -rotate-6' src='/src/assets/carriza-maiquez-sUIdCvblysI-unsplash.webp'></img>
+                    <img className=' drop-shadow-2xl shadow-lg/50 md:w-1/3 w-1/2 rounded-xl -rotate-6' src='/assets/carriza-maiquez-sUIdCvblysI-unsplash.webp'></img>
                     <p className=' text-black text-center text-4xl' >Dispuesto a crear paginas <br /> webs de alto impacto</p>
                 </div>
                 <div className='flex aditionalSegment flex-col gap-10 md:gap-5 md:flex-row justify-around w-full items-center '>
                     <p className=' text-black text-4xl text-center' >Impulsar su negocio <br /> con soluciones tecnologicas</p>
-                    <img className=' drop-shadow-2xl shadow-lg/50 md:w-1/3 w-1/2 text-center rounded-xl rotate-6' src='/src/assets/scott-graham-5fNmWej4tAA-unsplash.webp'></img>
+                    <img className=' drop-shadow-2xl shadow-lg/50 md:w-1/3 w-1/2 text-center rounded-xl rotate-6' src='/assets/scott-graham-5fNmWej4tAA-unsplash.webp'></img>
                 </div>
                 <div className='flex aditionalSegment flex-col gap-10 md:gap-5  md:flex-row justify-around w-full items-center'>
-                    <img className='  drop-shadow-2xl shadow-lg/50 md:w-1/3 rounded-xl w-1/2 -rotate-6' src='/src/assets/priscilla-du-preez-XkKCui44iM0-unsplash.webp'></img>
+                    <img className='  drop-shadow-2xl shadow-lg/50 md:w-1/3 rounded-xl w-1/2 -rotate-6' src='/assets/priscilla-du-preez-XkKCui44iM0-unsplash.webp'></img>
                     <p className=' text-black text-center text-4xl' >Formar parte de un <br /> equipo de trabajo proactivo</p>
                 </div>
                 <div className='flex mt-[50vh] flex-col justify-around w-full items-center'>

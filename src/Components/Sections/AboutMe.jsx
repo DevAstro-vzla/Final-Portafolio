@@ -94,7 +94,7 @@ function AboutMe() {
                         Tsu en informática, a quien le gusta la programación / la automatización de procesos / páginas web y diseño. <br></br> Viviendo en Venezuela esforzándome lo más que pueda <br></br>A lo largo de mi trayectoria he fallado, he aprendido, he enseñado y me profesionalizado <br></br> Será un gusto trabajar y ser de utilidad
                     </div>
                 </div>
-                <img className='itemSobreMi-3 opacity-0 self-center m-2 w-1/2 object-contain bg-cover' src='/src/assets/code.webp'></img>
+                <img className='itemSobreMi-3 opacity-0 self-center m-2 w-1/2 object-contain bg-cover' src='/assets/code.webp'></img>
             </div>
             <div className='bg-neutral-950 m-10 border border-neutral-800'>
                 <div className='w-2/3  justify-self-center overflow-scroll scroll text-5xl self-center m-15'
