@@ -6,8 +6,7 @@ import SphereRotation from '../3d/SphereRotation'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { SplitText } from 'gsap/all'
 gsap.registerPlugin(useGSAP, ScrollTrigger, SplitText)
-
-
+import { useRef } from 'react'
 
 function AboutMe() {
     const container = useRef()
