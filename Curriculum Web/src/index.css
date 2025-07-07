@@ -29,6 +29,7 @@
 :root {
   font-family: Nippo, sans-serif;
   line-height: 1.5;
+  scroll-behavior: smooth;
   font-weight: 400;
 
 ::-webkit-scrollbar {

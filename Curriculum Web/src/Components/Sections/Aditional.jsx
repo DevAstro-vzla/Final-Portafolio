@@ -90,7 +90,6 @@ function Aditional() {
             scrollTrigger: {
                 trigger: container.current,
                 start: "top bottom",
-                markers: true,
                 end: "clamp(bottom bottom)",
                 scrub: 1
 
@@ -256,8 +255,12 @@ function Aditional() {
                     <img className='  drop-shadow-2xl shadow-lg/50 md:w-1/3 rounded-xl w-1/2 -rotate-6' src='/src/assets/priscilla-du-preez-XkKCui44iM0-unsplash.webp'></img>
                     <p className=' text-black text-center text-4xl' >Formar parte de un <br /> equipo de trabajo proactivo</p>
                 </div>
-                <div className='flex gap-10 mt-[50vh] flex-col justify-around w-full items-center'>
-                    <p className=' ultiText mb-10 justify-self-center self-center text-2xl z-10  text-shadow-lg/90' >Es lo que define la excelencia</p>
+                <div className='flex mt-[50vh] flex-col justify-around w-full items-center'>
+                    <p className=' ultiText mb-5 justify-self-center self-center text-2xl z-10  text-shadow-lg/90' >Es lo que define la excelencia</p>
+                    <div className='flex flex-row gap-5 z-10'>
+                        <button className=' mb-2 text-red-400 cursor-pointer bg-black p-3'> <a href='https://mail.google.com/mail/?view=cm&fs=1&to=andrewrfofficial@gmail.com&su=Buenas,Mi nombre es ...'> Gmail </a></button>
+                        <button className=' mb-2 text-red-400 cursor-pointer bg-black p-3'> <a href='https://wa.me/584243213375?text=Hola!'> Whatsapp </a></button>
+                    </div>
                 </div>
             </div>
         </>
