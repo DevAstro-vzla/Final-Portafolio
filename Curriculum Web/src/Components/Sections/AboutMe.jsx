@@ -1,7 +1,7 @@
-import React, { useRef, useState } from 'react'
+
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
-import { Canvas, useFrame } from '@react-three/fiber'
+import { Canvas} from '@react-three/fiber'
 import SphereRotation from '../3d/SphereRotation'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { SplitText } from 'gsap/all'

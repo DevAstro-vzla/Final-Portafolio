@@ -1,9 +1,8 @@
-import React from 'react'
+
 import TitleBig from '../Text/TitleBig'
 import TextNormal from '../Text/TextNormal'
 import LinesSvg from '../Svg/Lines'
 import Corners from '../Svg/Corners'
-import Xsvg from '../Svg/X'
 import { useGSAP } from '@gsap/react'
 import { useRef } from 'react'
 import gsap from 'gsap'

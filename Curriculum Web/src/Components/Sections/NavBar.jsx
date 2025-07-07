@@ -1,5 +1,4 @@
 import React, { useRef, useState } from 'react'
-import TextNormal from '../Text/TextNormal'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 gsap.registerPlugin(useGSAP)

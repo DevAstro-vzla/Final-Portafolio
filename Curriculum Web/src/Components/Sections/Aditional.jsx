@@ -1,4 +1,4 @@
-import React, { Suspense, useRef } from 'react'
+import React, { useRef } from 'react'
 import gsap from 'gsap'
 import SplitText from 'gsap/SplitText'
 import { useGSAP } from '@gsap/react'
@@ -7,8 +7,6 @@ import { Canvas } from '@react-three/fiber'
 import { useLoader } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader'
-import { useControls } from 'leva'
-import { OrbitControls } from '@react-three/drei'
 
 gsap.registerPlugin(ScrollSmoother, SplitText,)
 
